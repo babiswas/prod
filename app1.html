@@ -1,0 +1,43 @@
+<html>
+ <head>
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+ </head>
+ <body>
+    <h1>My script</h1>
+    <script>
+         axios({
+  method:'get',
+  url:'https://captivateprime.adobe.com/primeapi/v2/user',
+  headers:{
+     'Authorization':'oauth 560c778489e723e778d3d172e9ba3e73',
+     'Accept':'application/vnd.api+json'
+  }
+}).then(response =>console.log(response)).catch(error=>console.log(error));
+
+
+axios({
+  method:'get',
+  url:'https://captivateprime.adobe.com/primeapi/v2/users',
+  headers:{
+     'Authorization':'oauth d90def4db1c4f9e7087303758871a4c4',
+     'Accept':'application/vnd.api+json'
+  }
+}).then(response =>console.log(response)).catch(error=>console.log(error));
+
+
+axios({
+  method:'post',
+  url:'https://captivateprime.adobe.com/primeapi/v2/enrollments',
+  headers:{
+     'Authorization':'oauth d90def4db1c4f9e7087303758871a4c4',
+     'Content-Type':'application/vnd.api+json;charset=UTF-8'
+  },
+  params:{
+     'loId':'course:1382765',
+     'loInstanceId':'course:1382765_1626031'
+ }
+}).then(response =>console.log(response)).catch(error=>console.log(error));
+
+    </script>
+ <body>
+</html>
